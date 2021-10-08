@@ -30,6 +30,28 @@ func RegisterDefaultTranslations(v *validator.Validate, trans ut.Translator) (er
 			override:    false,
 		},
 		{
+			tag: "required_if",
+			customRegisFunc: func(ut ut.Translator) (err error) {
+				return ut.Add("required_if", "{0}此时为比填字段", true)
+
+			},
+			customTransFunc: func(ut ut.Translator, fe validator.FieldError) string {
+				t, _ := ut.T("required_if", fe.Field())
+				return t
+			},
+		},
+		{
+			tag: "required_if_global",
+			customRegisFunc: func(ut ut.Translator) (err error) {
+				return ut.Add("required_if_global", "{0}此时为比填字段", true)
+
+			},
+			customTransFunc: func(ut ut.Translator, fe validator.FieldError) string {
+				t, _ := ut.T("required_if_global", fe.Field())
+				return t
+			},
+		},
+		{
 			tag: "len",
 			customRegisFunc: func(ut ut.Translator) (err error) {
 
