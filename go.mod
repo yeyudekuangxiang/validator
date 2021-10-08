@@ -4,7 +4,6 @@ go 1.13
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/gin-gonic/gin v1.7.4 // indirect
 	github.com/go-playground/assert/v2 v2.0.1
 	github.com/go-playground/locales v0.14.0
 	github.com/go-playground/universal-translator v0.18.0
